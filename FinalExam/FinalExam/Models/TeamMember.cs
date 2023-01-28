@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FinalExam.Models
 {
@@ -6,7 +7,9 @@ namespace FinalExam.Models
     {
         public int Id { get; set; }
         public int Order { get; set; }
+        [StringLength(maximumLength:50)]
         public string FullName { get; set; }
+        [StringLength(maximumLength:60)]
         public string Position { get; set; }
 
         public string? Image { get; set; }

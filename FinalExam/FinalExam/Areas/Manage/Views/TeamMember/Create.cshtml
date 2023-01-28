@@ -1,5 +1,5 @@
 ﻿@model TeamMember
-<div>
+<div class="container">
     <h1 class="mb-3">Create</h1>
     <form asp-action="create" method="post" enctype="multipart/form-data">
         <div class="row">
@@ -14,9 +14,9 @@
                 <span class="text-danger" asp-validation-for="Position"></span>
         </div>
             <div class="form-group col-4">
-            <label asp-for="FullName">FullName</label>
-            <input asp-for="FullName" class="form-control form-control-user" placeholder="FullName">
-            <span class="text-danger" asp-validation-for="FullName"></span>
+            <label asp-for="Order">Order</label>
+                <input asp-for="Order" class="form-control form-control-user" placeholder="Order">
+                <span class="text-danger" asp-validation-for="Order"></span>
         </div>
         </div>
         

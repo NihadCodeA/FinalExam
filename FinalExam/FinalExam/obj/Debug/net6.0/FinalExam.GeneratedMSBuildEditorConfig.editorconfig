@@ -20,6 +20,18 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXERhc2hib2FyZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/admin/Desktop/FinalExam/FinalExam/FinalExam/Areas/Manage/Views/SocialMediaAccount/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNvY2lhbE1lZGlhQWNjb3VudFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/FinalExam/FinalExam/FinalExam/Areas/Manage/Views/SocialMediaAccount/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNvY2lhbE1lZGlhQWNjb3VudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin/Desktop/FinalExam/FinalExam/FinalExam/Areas/Manage/Views/SocialMediaAccount/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNvY2lhbE1lZGlhQWNjb3VudFxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/admin/Desktop/FinalExam/FinalExam/FinalExam/Areas/Manage/Views/TeamMember/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFRlYW1NZW1iZXJcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

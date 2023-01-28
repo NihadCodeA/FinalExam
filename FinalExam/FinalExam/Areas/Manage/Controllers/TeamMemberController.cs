@@ -1,5 +1,7 @@
-﻿using FinalExam.Models;
+﻿using FinalExam.Helpers;
+using FinalExam.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
@@ -11,8 +13,11 @@ namespace FinalExam.Areas.Manage.Controllers
     public class TeamMemberController : Controller
     {
         private readonly DatabaseContext _context;
-        public TeamMemberController(DatabaseContext context) {
-        _context= context;
+        private readonly IWebHostEnvironment _env;
+        
+        public TeamMemberController(DatabaseContext context,IWebHostEnvironment env) {
+            _context= context;
+            _env= env;
         }
         public IActionResult Index()
         {
@@ -30,24 +35,56 @@ namespace FinalExam.Areas.Manage.Controllers
             if (!ModelState.IsValid) return View();
             if (teamMember.ImageFile != null)
             {
-
+                teamMember.Image = FileManager.SaveFile(_env.WebRootPath, "uploads/teams", teamMember.ImageFile);
             }
             else
             {
                 ModelState.AddModelError("ImageFile", "Image field is required");
                 return View();
             }
+            _context.TeamMembers.Add(teamMember);   
+            _context.SaveChanges();
             return RedirectToAction("Index","Teammember");
         }
         [HttpGet]
         public IActionResult Update(int id)
         {
-            return View();
+            TeamMember teamMember= _context.TeamMembers.FirstOrDefault(x=>x.Id==id);
+            if (teamMember == null) return NotFound();
+            return View(teamMember);
         }
         [HttpPost]
         public IActionResult Update(TeamMember teamMember)
         {
+            TeamMember existTeamMember = _context.TeamMembers.FirstOrDefault(x => x.Id == teamMember.Id);
+            if (existTeamMember == null) return NotFound();
+            if (!ModelState.IsValid) return View();
+            if (teamMember.ImageFile != null)
+            {
+                FileManager.DeleteFile(_env.WebRootPath, "uploads/teams", existTeamMember.Image);
+                existTeamMember.Image = FileManager.SaveFile(_env.WebRootPath, "uploads/teams", teamMember.ImageFile);
+            }
+            existTeamMember.FullName = teamMember.FullName;
+            existTeamMember.Order = teamMember.Order;
+            existTeamMember.Position = teamMember.Position;
+            existTeamMember.FullName = teamMember.FullName;
+            _context.SaveChanges();
             return RedirectToAction("Index", "Teammember");
         }
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            TeamMember teamMember = _context.TeamMembers.FirstOrDefault(x => x.Id == id);
+            if (teamMember == null) return NotFound();
+            if (teamMember.Image != null)
+            {
+                FileManager.DeleteFile(_env.WebRootPath, "uploads/teams", teamMember.Image);
+            }
+            _context.TeamMembers.Remove(teamMember);
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Teammember");
+        }
+
     }
 }

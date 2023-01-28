@@ -1,4 +1,4 @@
-﻿@model List<TeamMember>
+﻿@model List<SocialMediaAccount>
 @{
     int count = 0;
 }
@@ -14,32 +14,28 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">FullName</th>
-                    <th scope="col">Positon</th>
-                    <th scope="col">Order</th>
-                    <th scope="col">Image</th>
+                    <th scope="col">Icon</th>
+                    <th scope="col">Url</th>
                     <th scope="col">Update</th>
                     <th scope="col">Delete</th>
                 </tr>
             </thead>
             <tbody>
 
-                @foreach (var tm in Model)
+                @foreach (var socialMediaAccount in Model)
                 {
                     count++;
                     <tr>
                         <th scope="row">@count</th>
-                        <td>@tm.FullName</td>
-                        <td>@tm.Position</td>
-                        <td>@tm.Order</td>
                         <td>
-                            <img style="max-width:150px;max-height:150px;" src="~/uploads/teams/@tm.Image"/>
+                            @Html.Raw(socialMediaAccount.Icon)
+                        </td>
+                        <td>@socialMediaAccount.Url</td>
+                        <td>
+                            <a class="btn btn-primary" asp-controller="socialmediaaccount" asp-action="update" asp-route-id="@socialMediaAccount.Id">Update</a>
                         </td>
                         <td>
-                            <a class="btn btn-primary" asp-controller="teammember" asp-action="update" asp-route-id="@tm.Id">Update</a>
-                        </td>
-                        <td>
-                            <a class="btn btn-danger" asp-controller="teammember" asp-action="delete" asp-route-id="@tm.Id">Update</a>
+                            <a class="btn btn-danger" asp-controller="socialmediaaccount" asp-action="delete" asp-route-id="@socialMediaAccount.Id">Update</a>
                         </td>
                     </tr>
                 }
