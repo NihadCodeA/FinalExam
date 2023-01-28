@@ -27,10 +27,11 @@
                     count++;
                     <tr>
                         <th scope="row">@count</th>
-                        <td>
-                            @Html.Raw(socialMediaAccount.Icon)
+                        <th scope="row">@socialMediaAccount.TeamMember?.FullName</th>
+                        <td >
+                          @socialMediaAccount.Icon
                         </td>
-                        <td>@socialMediaAccount.Url</td>
+                        <td><a href="@socialMediaAccount.Url">Url</a></td>
                         <td>
                             <a class="btn btn-primary" asp-controller="socialmediaaccount" asp-action="update" asp-route-id="@socialMediaAccount.Id">Update</a>
                         </td>

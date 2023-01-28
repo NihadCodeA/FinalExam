@@ -6,8 +6,10 @@ namespace FinalExam.Controllers
 {
     public class HomeController : Controller
     {
+        public HomeController(DatabaseContext c) { }
         public IActionResult Index()
         {
+            
             return View();
         }
 

@@ -27,13 +27,13 @@ namespace FinalExam.Areas.Manage.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            ViewBag.TeamMembers = _context.TeamMembers.ToList();
+            ViewBag.TeamMembers = _context.TeamMembers.Include(x=>x.SocialMediaAccounts).ToList();
             return View();
         }
         [HttpPost]
         public IActionResult Create(SocialMediaAccount socialMediaAccount)
         {
-            ViewBag.TeamMembers = _context.TeamMembers.ToList();
+            ViewBag.TeamMembers = _context.TeamMembers.Include(x => x.SocialMediaAccounts).ToList();
             if (socialMediaAccount == null) return NotFound();
             if (!ModelState.IsValid) return View();
             
@@ -44,7 +44,7 @@ namespace FinalExam.Areas.Manage.Controllers
         [HttpGet]
         public IActionResult Update(int id)
         {
-            ViewBag.TeamMembers = _context.TeamMembers.ToList();
+            ViewBag.TeamMembers = _context.TeamMembers.Include(x => x.SocialMediaAccounts).ToList();
             SocialMediaAccount socialMediaAccount = _context.SocialMediaAccounts.Include(x=>x.TeamMember).FirstOrDefault(x => x.Id == id);
             if (socialMediaAccount == null) return NotFound();
             return View(socialMediaAccount);
@@ -52,7 +52,7 @@ namespace FinalExam.Areas.Manage.Controllers
         [HttpPost]
         public IActionResult Update(SocialMediaAccount socialMediaAccount)
         {
-            ViewBag.TeamMembers = _context.TeamMembers.ToList();
+            ViewBag.TeamMembers = _context.TeamMembers.Include(x => x.SocialMediaAccounts).ToList();
             SocialMediaAccount existSocialMediaAccount = _context.SocialMediaAccounts.Include(x=>x.TeamMember).FirstOrDefault(x => x.Id == socialMediaAccount.Id);
             if (existSocialMediaAccount == null) return NotFound();
             if (!ModelState.IsValid) return View();

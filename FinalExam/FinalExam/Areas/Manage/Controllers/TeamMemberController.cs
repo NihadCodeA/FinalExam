@@ -49,14 +49,14 @@ namespace FinalExam.Areas.Manage.Controllers
         [HttpGet]
         public IActionResult Update(int id)
         {
-            TeamMember teamMember= _context.TeamMembers.FirstOrDefault(x=>x.Id==id);
+            TeamMember teamMember= _context.TeamMembers.Include(x => x.SocialMediaAccounts).FirstOrDefault(x=>x.Id==id);
             if (teamMember == null) return NotFound();
             return View(teamMember);
         }
         [HttpPost]
         public IActionResult Update(TeamMember teamMember)
         {
-            TeamMember existTeamMember = _context.TeamMembers.FirstOrDefault(x => x.Id == teamMember.Id);
+            TeamMember existTeamMember = _context.TeamMembers.Include(x => x.SocialMediaAccounts).FirstOrDefault(x => x.Id == teamMember.Id);
             if (existTeamMember == null) return NotFound();
             if (!ModelState.IsValid) return View();
             if (teamMember.ImageFile != null)
@@ -75,7 +75,7 @@ namespace FinalExam.Areas.Manage.Controllers
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            TeamMember teamMember = _context.TeamMembers.FirstOrDefault(x => x.Id == id);
+            TeamMember teamMember = _context.TeamMembers.Include(x => x.SocialMediaAccounts).FirstOrDefault(x => x.Id == id);
             if (teamMember == null) return NotFound();
             if (teamMember.Image != null)
             {
