@@ -41,7 +41,7 @@ namespace FinalExam.Controllers
                 ModelState.AddModelError("", "Username or password incorrect!");
                 return View();
             }
-            return RedirectToAction("Index","Account") ;
+            return RedirectToAction("Index","Home") ;
         }
         public async Task<IActionResult> Logout()
         {
@@ -59,6 +59,47 @@ namespace FinalExam.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(MemberRegisterViewModel registerVM)
         {
+            if (!ModelState.IsValid) return View();
+            AppUser member = null;
+
+            member = await _userManager.FindByNameAsync(registerVM.Username);
+            if (member != null)
+            {
+                ModelState.AddModelError("Username", "Username has taken!");
+                return View();
+            }
+            
+            member = await _userManager.FindByEmailAsync(registerVM.Email);
+            if (member != null)
+            {
+                ModelState.AddModelError("Email", "Email has taken!");
+                return View();
+            }
+            member = new AppUser
+            {
+                Fullname= registerVM.Fullname,
+                Email=registerVM.Email,
+                UserName=registerVM.Username,
+            };
+            var result = await _userManager.CreateAsync(member, registerVM.Password);
+            if (!result.Succeeded)
+            {
+                foreach(var err in result.Errors)
+                {
+                    ModelState.AddModelError("", err.Description);
+                    return View();
+                }
+            }
+            var roleResult = await _userManager.AddToRoleAsync(member, "Member");
+            if (!roleResult.Succeeded)
+            {
+                foreach (var err in roleResult.Errors)
+                {
+                    ModelState.AddModelError("", err.Description);
+                    return View();
+                }
+            }
+            await _signInManager.SignInAsync(member, isPersistent: false);
             return RedirectToAction("Login", "Account");
         }
     }

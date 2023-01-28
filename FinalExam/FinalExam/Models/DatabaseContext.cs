@@ -8,5 +8,7 @@ namespace FinalExam.Models
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
 
         public DbSet<AppUser> Users { get; set; }
+        public DbSet<TeamMember> TeamMembers { get; set; }
+        public DbSet<SocialMediaAccount> SocialMediaAccounts { get; set; }
     }
 }

@@ -1,4 +1,6 @@
-﻿<div id="page-top" class="index">
+﻿@model AppUser
+
+<div id="page-top" class="index">
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -8,8 +10,19 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a class="page-scroll" href="#page-top">Home</a></li>
-                        <li><a class="page-scroll" asp-controller="account" asp-action="login">Login</a></li>
-                        <li><a class="page-scroll" asp-controller="account" asp-action="register">Register</a></li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li><a class="page-scroll">@Model?.Fullname </a></li>
+                        if (User.IsInRole("Admin")){
+                            <li class="btn btn-primary"><a class="page-scroll" asp-area="manage" asp-controller="dashboard" asp-action="index">Dashboard</a></li>
+                        }
+                    <li class="btn btn-danger"><a class="page-scroll text-danger" asp-controller="account" asp-action="logout">Logout</a></li>
+                    }
+                    else
+                    {
+                    <li><a class="page-scroll" asp-controller="account" asp-action="login">Login</a></li>
+                    <li><a class="page-scroll" asp-controller="account" asp-action="register">Register</a></li>
+                    }
                         <li><a class="page-scroll" href="#services">Services</a></li>
                         <li><a class="page-scroll" href="#port">Portfolio</a></li>
                         <li><a class="page-scroll" href="#about">About</a></li>
