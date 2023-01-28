@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cnStKw8l1gywTQ0SLDyVQa/+mNoWRjCQz1zmraqkdI0=",
+  "Hash": "hkRXIC/wJCrTBnKZeU0/isME56aNkkwdZ/regVhwXt8=",
   "Source": "FinalExam",
   "BasePath": "_content/FinalExam",
   "Mode": "Default",
@@ -32198,6 +32198,23 @@
       "OriginalItemSpec": "wwwroot\\uploads\\teams\\33e232fe-08ff-43e6-90f0-f0cf48d96706Zac-Efron-7-1600.png"
     },
     {
+      "Identity": "C:\\Users\\admin\\Desktop\\FinalExam\\FinalExam\\FinalExam\\wwwroot\\uploads\\teams\\a3860541-f6e8-49d4-babc-718ced562983a-new-beginning.png",
+      "SourceId": "FinalExam",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\FinalExam\\FinalExam\\FinalExam\\wwwroot\\",
+      "BasePath": "_content/FinalExam",
+      "RelativePath": "uploads/teams/a3860541-f6e8-49d4-babc-718ced562983a-new-beginning.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\teams\\a3860541-f6e8-49d4-babc-718ced562983a-new-beginning.png"
+    },
+    {
       "Identity": "C:\\Users\\admin\\Desktop\\FinalExam\\FinalExam\\FinalExam\\wwwroot\\uploads\\teams\\aa50b29d-4fd8-4d93-b4a1-fcaefdf7b5b5IMG_0195.png",
       "SourceId": "FinalExam",
       "SourceType": "Discovered",
@@ -32230,23 +32247,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\teams\\bca6f526-1438-4e30-9310-4c130092256fia-z4-tablet-black-1240x840-a07acf270af4d6789d0e83aea747b064.png"
-    },
-    {
-      "Identity": "C:\\Users\\admin\\Desktop\\FinalExam\\FinalExam\\FinalExam\\wwwroot\\uploads\\teams\\d86ec327-6666-451b-ac88-6cc0a129507elz2prlf1tbf.png",
-      "SourceId": "FinalExam",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\admin\\Desktop\\FinalExam\\FinalExam\\FinalExam\\wwwroot\\",
-      "BasePath": "_content/FinalExam",
-      "RelativePath": "uploads/teams/d86ec327-6666-451b-ac88-6cc0a129507elz2prlf1tbf.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\teams\\d86ec327-6666-451b-ac88-6cc0a129507elz2prlf1tbf.png"
     }
   ]
 }
