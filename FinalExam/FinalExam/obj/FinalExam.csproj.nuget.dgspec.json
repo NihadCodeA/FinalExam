@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\Desktop\\FinalExam\\FinalExam\\FinalExam\\FinalExam.csproj": {}
+    "C:\\Users\\admin\\Desktop\\New folder\\FinalExam\\FinalExam\\FinalExam\\FinalExam.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\Desktop\\FinalExam\\FinalExam\\FinalExam\\FinalExam.csproj": {
+    "C:\\Users\\admin\\Desktop\\New folder\\FinalExam\\FinalExam\\FinalExam\\FinalExam.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\FinalExam\\FinalExam\\FinalExam\\FinalExam.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Desktop\\New folder\\FinalExam\\FinalExam\\FinalExam\\FinalExam.csproj",
         "projectName": "FinalExam",
-        "projectPath": "C:\\Users\\admin\\Desktop\\FinalExam\\FinalExam\\FinalExam\\FinalExam.csproj",
+        "projectPath": "C:\\Users\\admin\\Desktop\\New folder\\FinalExam\\FinalExam\\FinalExam\\FinalExam.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\FinalExam\\FinalExam\\FinalExam\\obj\\",
+        "outputPath": "C:\\Users\\admin\\Desktop\\New folder\\FinalExam\\FinalExam\\FinalExam\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -8,7 +8,7 @@ using System.Data;
 namespace FinalExam.Areas.Manage.Controllers
 {
         [Area("Manage")]
-        [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
     public class SocialMediaAccountController : Controller
     {
             private readonly DatabaseContext _context;

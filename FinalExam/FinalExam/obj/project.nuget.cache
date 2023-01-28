@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ij/vQqOvO2I4uSj6hKeIjjI4e4TSKZ6cMJ+gXDZ3rS+7fGdTjkNhLhI+PMw+KiHAM8vJEz1NkYY+3kqCA9+Y8A==",
+  "dgSpecHash": "4h9N5UMTCIrUy8m8W8oSsWPL4+/EHAMgmYiAIwP/Bnl43MlKTEbX1POHY42o1967Tf+5mmdOeAt4wXX+7zUtXw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\Desktop\\FinalExam\\FinalExam\\FinalExam\\FinalExam.csproj",
+  "projectFilePath": "C:\\Users\\admin\\Desktop\\New folder\\FinalExam\\FinalExam\\FinalExam\\FinalExam.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
