@@ -1,0 +1,35 @@
+﻿@model TeamMember
+<div>
+    <h1 class="mb-3">Create</h1>
+    <form asp-action="create" method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="form-group col-4">
+            <label asp-for="FullName">FullName</label>
+            <input asp-for="FullName" class="form-control form-control-user" placeholder="FullName">
+            <span class="text-danger" asp-validation-for="FullName"></span>
+        </div>
+        <div class="form-group col-4">
+                <label asp-for="Position">Positon</label>
+                <input asp-for="Position" class="form-control form-control-user" placeholder="Positon">
+                <span class="text-danger" asp-validation-for="Position"></span>
+        </div>
+            <div class="form-group col-4">
+            <label asp-for="FullName">FullName</label>
+            <input asp-for="FullName" class="form-control form-control-user" placeholder="FullName">
+            <span class="text-danger" asp-validation-for="FullName"></span>
+        </div>
+        </div>
+        
+        <div class="row">
+            <div class="form-group col-12">
+                <label asp-for="ImageFile">ImageFile</label>
+                <input asp-for="ImageFile" class="form-control form-control-user">
+                <span class="text-danger" asp-validation-for="ImageFile"></span>
+        </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-user btn-block">
+            Create
+        </button>
+    </form>
+</div>

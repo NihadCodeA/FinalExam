@@ -14,9 +14,10 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">FullName</th>
+                    <th scope="col">Positon</th>
+                    <th scope="col">Order</th>
+                    <th scope="col">Image</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,8 +28,17 @@
                     <tr>
                         <th scope="row">@count</th>
                         <td>@tm.FullName</td>
-                        <td>@tm.Positon</td>
+                        <td>@tm.Position</td>
                         <td>@tm.Order</td>
+                        <td>
+                            <img style="max-width:150px;max-height:150px;" src="~/uploads/teammembers/@tm.Image"/>
+                        </td>
+                        <td>
+                            <a class="btn btn-primary" asp-controller="teammembers" asp-action="update" asp-route-id="@tm.Id">Update</a>
+                        </td>
+                        <td>
+                            <a class="btn btn-danger" asp-controller="teammembers" asp-action="delete" asp-route-id="@tm.Id">Update</a>
+                        </td>
                     </tr>
                 }
 

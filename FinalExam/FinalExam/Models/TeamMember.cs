@@ -7,7 +7,7 @@ namespace FinalExam.Models
         public int Id { get; set; }
         public int Order { get; set; }
         public string FullName { get; set; }
-        public string Positon { get; set; }
+        public string Position { get; set; }
 
         public string? Image { get; set; }
         [NotMapped]
