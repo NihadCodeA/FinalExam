@@ -1,0 +1,38 @@
+﻿@model List<TeamMember>
+@{
+    int count = 0;
+}
+<div class="container">
+    <div class="d-flex justify-content-between align-content-center">
+        <div>Create a new Team member</div>
+        <div>
+            <a class="btn btn-success" asp-controller="teammember" asp-action="create">+Create</a>
+        </div>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var tm in Model)
+                {
+                    count++;
+                    <tr>
+                        <th scope="row">@count</th>
+                        <td>@tm.FullName</td>
+                        <td>@tm.Positon</td>
+                        <td>@tm.Order</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
