@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hkRXIC/wJCrTBnKZeU0/isME56aNkkwdZ/regVhwXt8=",
+  "Hash": "rC7rKAQAex9cyOTYCS9M+SYGGMd8HJ6CFRbqV39QHnA=",
   "Source": "FinalExam",
   "BasePath": "_content/FinalExam",
   "Mode": "Default",
@@ -32196,6 +32196,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\teams\\33e232fe-08ff-43e6-90f0-f0cf48d96706Zac-Efron-7-1600.png"
+    },
+    {
+      "Identity": "C:\\Users\\admin\\Desktop\\FinalExam\\FinalExam\\FinalExam\\wwwroot\\uploads\\teams\\732970ab-2a96-41f5-8fd8-c4eb6589cba1airplane-take-off-at-sunset-hd-wallpaper.png",
+      "SourceId": "FinalExam",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\admin\\Desktop\\FinalExam\\FinalExam\\FinalExam\\wwwroot\\",
+      "BasePath": "_content/FinalExam",
+      "RelativePath": "uploads/teams/732970ab-2a96-41f5-8fd8-c4eb6589cba1airplane-take-off-at-sunset-hd-wallpaper.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\teams\\732970ab-2a96-41f5-8fd8-c4eb6589cba1airplane-take-off-at-sunset-hd-wallpaper.png"
     },
     {
       "Identity": "C:\\Users\\admin\\Desktop\\FinalExam\\FinalExam\\FinalExam\\wwwroot\\uploads\\teams\\a3860541-f6e8-49d4-babc-718ced562983a-new-beginning.png",

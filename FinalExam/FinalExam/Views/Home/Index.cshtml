@@ -1,4 +1,4 @@
-﻿@model HomeViewModel
+﻿@model List<TeamMember>
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -165,7 +165,7 @@
             </div>
         </div>
         <div class="row">
-            @*@foreach (var tm in Model.TeamMembers)
+            @foreach (var tm in Model)
             {
              <div class="col-sm-4">
                 <div class="team-member">
@@ -175,12 +175,12 @@
                      <ul class="list-inline social-buttons">
                     @foreach (var smAccounts in tm.SocialMediaAccounts)
                     {
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="@smAccounts.Url">@Html.Raw(smAccounts.Icon)</a></li>
                     }
                     </ul>
                 </div>
             </div>
-            }*@
+            }
         </div>
     </div>
 </section>

@@ -17,7 +17,7 @@ namespace FinalExam.ViewComponents
             {
                 await _userManager.FindByNameAsync(User.Identity.Name);
             }
-            
+
             return View(await Task.FromResult(user));
         }
     }

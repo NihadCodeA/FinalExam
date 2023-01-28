@@ -15,12 +15,9 @@ namespace FinalExam.Controllers
         }
         public IActionResult Index()
         {
-            HomeViewModel homeVM = new HomeViewModel
-            {
-                TeamMembers=_context.TeamMembers.Include(x=>x.SocialMediaAccounts).OrderBy(x=>x.Order).Take(3).ToList(),
-                SocialMediaAccounts=_context.SocialMediaAccounts.OrderByDescending(x=>x.Id).Take(4).ToList(),
-            };
-            return View(homeVM);
+            List<TeamMember> TeamMembers = _context.TeamMembers.Include(x => x.SocialMediaAccounts)
+                .OrderBy(x => x.Order).Take(3).ToList();
+            return View(TeamMembers);
         }
 
     }

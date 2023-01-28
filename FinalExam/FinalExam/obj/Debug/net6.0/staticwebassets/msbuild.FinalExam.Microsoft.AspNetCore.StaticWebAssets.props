@@ -30272,6 +30272,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\teams\33e232fe-08ff-43e6-90f0-f0cf48d96706Zac-Efron-7-1600.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\teams\732970ab-2a96-41f5-8fd8-c4eb6589cba1airplane-take-off-at-sunset-hd-wallpaper.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>FinalExam</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/FinalExam</BasePath>
+      <RelativePath>uploads/teams/732970ab-2a96-41f5-8fd8-c4eb6589cba1airplane-take-off-at-sunset-hd-wallpaper.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\teams\732970ab-2a96-41f5-8fd8-c4eb6589cba1airplane-take-off-at-sunset-hd-wallpaper.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\teams\a3860541-f6e8-49d4-babc-718ced562983a-new-beginning.png))">
       <SourceType>Package</SourceType>
       <SourceId>FinalExam</SourceId>

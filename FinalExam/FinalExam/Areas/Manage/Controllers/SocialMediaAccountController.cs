@@ -17,12 +17,15 @@ namespace FinalExam.Areas.Manage.Controllers
             {
                 _context = context;
             }
-            public IActionResult Index()
+            public IActionResult Index(int page=1)
             {
             ViewBag.TeamMembers = _context.TeamMembers.ToList();
             List<SocialMediaAccount> smAccounts = _context.SocialMediaAccounts.Include(x => x.TeamMember).ToList();
             return View(smAccounts);
-            }
+            //var query = _context.SocialMediaAccounts.Include(x => x.TeamMember).AsQueryable();
+            //var items = PaginatedList<SocialMediaAccount>.Create(query, page, 3);
+            //return View(items);
+        }
 
         [HttpGet]
         public IActionResult Create()

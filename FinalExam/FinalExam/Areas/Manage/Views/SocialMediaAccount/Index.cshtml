@@ -40,8 +40,31 @@
                         </td>
                     </tr>
                 }
+              
 
+              
             </tbody>
         </table>
+        @*<form asp-action="index" method="get">
+
+            <nav aria-label="Page navigation example">
+                @if (Model.HasPrevious)
+                {
+                    <li class="page-item"><a class="page-link" asp-area="manage" asp-controller="SocialMediaAccount" asp-action="index" asp-route-page="@(Model.Page-1)">Previous</a></li>
+                }
+                <ul class="pagination">
+                    @for (int i = 1; i < Model.TotalPage; i++)
+                    {
+                        <li class="page-item @(Model.Page==i ? "active" : "")">
+                            <a asp-area="manage" asp-controller="SocialMediaAccount" asp-action="index" asp-route-page="@i">@i</a>
+                        </li>
+                    }
+                </ul>
+                @if (Model.HasNext)
+                {
+                    <li class="page-item"><a class="page-link" asp-area="manage" asp-controller="SocialMediaAccount" asp-action="index" asp-route-page="@(Model.Page+1)">Next</a></li>
+                }
+            </nav>
+        </form>*@
     </div>
 </div>

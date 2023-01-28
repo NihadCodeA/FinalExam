@@ -19,10 +19,14 @@ namespace FinalExam.Areas.Manage.Controllers
             _context= context;
             _env= env;
         }
-        public IActionResult Index()
+        public IActionResult Index(int page=1)
         {
             List<TeamMember> teamMembers = _context.TeamMembers.Include(x=>x.SocialMediaAccounts).ToList();
+            //var query = _context.SocialMediaAccounts.Include(x => x.TeamMember).AsQueryable();
+            //var items = PaginatedList<SocialMediaAccount>.Create(query, page, 3);
+            //return View(items);
             return View(teamMembers);
+
         }
         [HttpGet]
         public IActionResult Create() {
