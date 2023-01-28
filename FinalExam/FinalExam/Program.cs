@@ -1,4 +1,5 @@
 using FinalExam.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,17 @@ builder.Services.AddDbContext<DatabaseContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
+
+builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
+{
+    opt.Password.RequiredUniqueChars = 0;
+    opt.Password.RequiredLength = 8;
+    opt.Password.RequireNonAlphanumeric = false;
+    opt.Password.RequireLowercase = true;
+    opt.Password.RequireUppercase = true;
+    opt.Password.RequireDigit = true;
+    opt.User.RequireUniqueEmail = false;
+}).AddEntityFrameworkStores<DatabaseContext>().AddDefaultTokenProviders();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
