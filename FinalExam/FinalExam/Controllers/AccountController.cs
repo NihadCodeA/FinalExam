@@ -20,5 +20,15 @@ namespace FinalExam.Controllers
         {
             return View() ;
         }
+        [HttpGet]
+        public async Task<IActionResult> Register()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Register(MemberRegisterViewModel registerVM)
+        {
+            return View();
+        }
     }
 }

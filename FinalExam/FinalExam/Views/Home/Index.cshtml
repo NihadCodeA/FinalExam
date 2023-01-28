@@ -71,10 +71,10 @@
 
     Modernizr.load({
         test: Modernizr.csstransforms3d && Modernizr.csstransitions,
-        yep: ['./assets/js/jquery-1.10.1.min.js', './assets/js/jquery.hoverfold.js'],
+        yep: ['../assets/js/jquery-1.10.1.min.js', '../assets/js/jquery.hoverfold.js'],
         nope: '',
         callback: function(url, result, key) {
-            if (url === './assets/js/jquery.hoverfold.js') {
+            if (url === '../assets/js/jquery.hoverfold.js') {
                 $('#grid').hoverfold();
             }
         }
